@@ -15,7 +15,8 @@ import com.demo.repo.CourseRepo;
 public class controllers {
 	 @Autowired
 	    private AuthorRepo authorRepo;
-	     private CourseRepo courseRepo;
+	 @Autowired
+	  private CourseRepo courseRepo;
 @RequestMapping("/")
 public String index(){
 	return "index";
@@ -37,17 +38,18 @@ public String add(@ModelAttribute("author") Author author) {
 
     return "index";  // Redirecting to another page (e.g., the list of authors)
 }
-@RequestMapping("saveCourse")
+@RequestMapping("/saveCourse")
 public String savecourse(@ModelAttribute("course") Course c)
 {
+	System.out.println("hello"+" "+c);
 	courseRepo.save(c);
 	
 	return "index";
 }
 @RequestMapping("courseForm")
-public String courses()
-{
-	return "course";
+public String courses(Model model) {
+    model.addAttribute("course", new Course());  // Add this line
+    return "course";
 }
 
 @RequestMapping("resourceForm")

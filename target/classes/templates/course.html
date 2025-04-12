@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Course</title>
-    <link rel="stylesheet" href="course.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" th:href="@{/course.css}"> <!-- Link to your CSS file -->
 </head>
 <body>
     <div class="container">
         <h2>Add Course</h2>
-        <form id="courseForm">
-            <label for="title">Course Title:</label>
-            <input type="text" id="title" name="title" required>
 
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description" required>
+        <form th:action="@{/saveCourse}" method="post" th:object="${course}">
+            <label for="title">Course Title:</label><br>
+            <input type="text" id="title" th:field="*{title}" required><br><br>
+
+            <label for="description">Description:</label><br>
+            <input type="text" id="description" th:field="*{description}" required><br><br>
 
             <button type="submit">Save Course</button>
         </form>
 
         <div class="course-list">
             <h3>Existing Courses</h3>
-            <ul id="courseList">
-                <li>Course 1: Description of Course 1</li>
-                <li>Course 2: Description of Course 2</li>
-                <li>Course 3: Description of Course 3</li>
-                <!-- Add more courses as needed -->
+            <ul>
+                <li th:each="c : ${courses}">
+                    <span th:text="${c.title}">Course Title</span>: 
+                    <span th:text="${c.description}">Course Description</span>
+                </li>
             </ul>
         </div>
     </div>
