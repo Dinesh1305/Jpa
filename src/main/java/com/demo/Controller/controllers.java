@@ -34,5 +34,9 @@ public String add(@ModelAttribute("author") Author author) {
 
     return "index";  // Redirecting to another page (e.g., the list of authors)
 }
-
+@RequestMapping("courseForm")
+public String courses()
+{
+	return "course";
+}
 }
