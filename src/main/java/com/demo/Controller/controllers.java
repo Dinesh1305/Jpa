@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.model.Author;
+import com.demo.model.Course;
 import com.demo.repo.AuthorRepo;
+import com.demo.repo.CourseRepo;
 
 @Controller
 public class controllers {
 	 @Autowired
 	    private AuthorRepo authorRepo;
+	     private CourseRepo courseRepo;
 @RequestMapping("/")
 public String index(){
 	return "index";
@@ -33,6 +36,13 @@ public String add(@ModelAttribute("author") Author author) {
 	}  
 
     return "index";  // Redirecting to another page (e.g., the list of authors)
+}
+@RequestMapping("saveCourse")
+public String savecourse(@ModelAttribute("course") Course c)
+{
+	courseRepo.save(c);
+	
+	return "index";
 }
 @RequestMapping("courseForm")
 public String courses()
