@@ -45,4 +45,9 @@ public String resources()
 {
 	return "resources";
 }
+@RequestMapping("lectureForm")
+public String  lecture()
+{
+	return "lecture";
+}
 }
