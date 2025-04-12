@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resource</title>
+    <link rel="stylesheet" href="resources.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Add Resource</h2>
+        <form id="resourceForm">
+            <label for="name">Resource Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="size">Size (in KB):</label>
+            <input type="number" id="size" name="size" required>
+
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+
+            <button type="submit">Add Resource</button>
+        </form>
+
+        <div class="resource-list">
+            <h3>Existing Resources</h3>
+            <ul id="resourceList">
+                <li>Resource 1: 500 KB - http://example.com/resource1</li>
+                <li>Resource 2: 300 KB - http://example.com/resource2</li>
+                <li>Resource 3: 700 KB - http://example.com/resource3</li>
+                <!-- Add more resources as needed -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
