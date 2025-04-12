@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, Spring Boot with Thymeleaf!</h1>
+        <div class="button-container">
+            <a th:href="@{/authorForm}" class="btn">Author</a>
+            <a th:href="@{/courseForm}" class="btn">Course</a>
+            <a th:href="@{/resourceForm}" class="btn">Resource</a>
+        </div>
+    </div>
+</body>
+</html>

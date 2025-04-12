@@ -17,6 +17,10 @@ public class SpringJpa1Application {
 	        UseDataBase e = context.getBean(UseDataBase.class);
 	       // e.use(); //
 	     //  e.insert();
+	        
+	        
+	        
+	       
 	}
 
 }

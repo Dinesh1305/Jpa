@@ -1,5 +1,7 @@
 package com.demo.model;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,6 +13,7 @@ public class Course {
 private Integer c_id;
 private String title;
 private String description;
+
 public Integer getC_id() {
 	return c_id;
 }

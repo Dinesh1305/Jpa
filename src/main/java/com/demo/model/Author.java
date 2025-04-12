@@ -1,6 +1,8 @@
 package com.demo.model;
 
 
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +29,9 @@ private String lastName;
 		unique=true
 		)
 private String  email;
+
+
+
 public Integer getId() {
 	return id;
 }
