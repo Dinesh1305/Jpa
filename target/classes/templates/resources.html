@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Add Resource</h2>
-        <form id="resourceForm">
+		<form th:action="@{saveResources}" method="post" th:object="${resources}">
             <label for="name">Resource Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -19,7 +19,7 @@
             <label for="url">URL:</label>
             <input type="text" id="url" name="url" required>
 
-            <button type="submit">Add Resource</button>
+            <button type="submit">Save Resources</button>
         </form>
 
         <div class="resource-list">

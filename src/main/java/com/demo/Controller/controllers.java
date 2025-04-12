@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.model.Author;
 import com.demo.model.Course;
+import com.demo.model.Resources;
 import com.demo.repo.AuthorRepo;
 import com.demo.repo.CourseRepo;
+import com.demo.repo.ResourcesRepo;
 
 @Controller
 public class controllers {
@@ -17,6 +19,8 @@ public class controllers {
 	    private AuthorRepo authorRepo;
 	 @Autowired
 	  private CourseRepo courseRepo;
+	 @Autowired
+	 private ResourcesRepo resourcesRepo;
 @RequestMapping("/")
 public String index(){
 	return "index";
@@ -53,9 +57,17 @@ public String courses(Model model) {
 }
 
 @RequestMapping("resourceForm")
-public String resources()
+public String resources(Model model)
 {
+	model.addAttribute("resources",new Resources());
 	return "resources";
+}
+@RequestMapping("/saveResources")
+public String resources1(@ModelAttribute("resources") Resources r)
+{
+	System.out.println(r);
+resourcesRepo.save(r);
+return "index";
 }
 @RequestMapping("lectureForm")
 public String  lecture()

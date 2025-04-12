@@ -1,29 +1,57 @@
-/* styles.css */
-
-/* Container styling */
-.container {
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Button styling */
-.button-container {
-    margin-top: 30px;
+h1 {
+    color: #0057B7; /* Blue */
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #0057B7; /* Blue */
+    color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
+    background-color: white;
+    color: #0057B7;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #e0efff;
 }

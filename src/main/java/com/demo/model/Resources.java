@@ -1,11 +1,15 @@
 package com.demo.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "resources")
 public class Resources {
 @Id
+@GeneratedValue
 private Integer id;
 private String name;
 private int size;
@@ -33,6 +37,10 @@ public String getUrl() {
 }
 public void setUrl(String url) {
 	this.url = url;
+}
+@Override
+public String toString() {
+	return "Resources [id=" + id + ", name=" + name + ", size=" + size + ", url=" + url + "]";
 }
 
 
