@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <h2>Add Lecture</h2>
-        <form id="lectureForm">
+
+        <!-- Form submits to savelecture using POST -->
+        <form id="lectureForm" action="savelecture" method="post">
             <label for="name">Lecture Name:</label>
             <input type="text" id="name" name="name" required>
 

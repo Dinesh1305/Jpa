@@ -6,30 +6,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.demo.model.Author;
-import com.demo.model.Course;
 import com.demo.model.Resources;
-import com.demo.repo.AuthorRepo;
-import com.demo.repo.CourseRepo;
 import com.demo.repo.ResourcesRepo;
 
 @Controller
-public class controllers {
+public class ResourcesController {
 	
-
-
-@RequestMapping("/")
-public String index(){
+	 @Autowired
+	 private ResourcesRepo resourcesRepo;
+	@RequestMapping("resourceForm")
+	public String resources(Model model)
+	{
+		model.addAttribute("resources",new Resources());
+		return "resources";
+	}
+	@RequestMapping("/saveResources")
+	public String resources1(@ModelAttribute("resources") Resources r)
+	{
+		System.out.println(r);
+	resourcesRepo.save(r);
 	return "index";
-}
-
-
-
-
-
-@RequestMapping("SectionForm")
-public String Section()
-{
-	return "section";
-}
+	}
 }
