@@ -74,4 +74,9 @@ public String  lecture()
 {
 	return "lecture";
 }
+@RequestMapping("SectionForm")
+public String Section()
+{
+	return "section";
+}
 }

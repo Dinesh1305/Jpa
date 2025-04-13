@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section Form</title>
+    <link rel="stylesheet" href="section.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Section Form</h2>
+        <form action="/submitSection" method="post">
+            <label for="p_id">ID:</label>
+            <input type="number" id="p_id" name="p_id" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="sectionOrder">Section Order:</label>
+            <input type="text" id="sectionOrder" name="sectionOrder" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
