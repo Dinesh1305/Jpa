@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #000; /* Black background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,43 +8,47 @@ body {
 }
 
 .form-container {
-    background-color: white;
+    background-color: #fff; /* White form background */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Light shadow */
     width: 350px;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #000; /* Black text */
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #000; /* Black text */
 }
 
 form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Light gray border */
     border-radius: 5px;
+    background-color: #f0f0f0; /* Light gray background for input */
+    color: #000; /* Black text */
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #000; /* Black button background */
     border: none;
-    color: white;
+    color: white; /* White text */
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #444; /* Dark gray on hover */
 }

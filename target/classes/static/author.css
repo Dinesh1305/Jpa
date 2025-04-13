@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
+  background-color: #000; /* Black background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 form {
-  background-color: #fff;
+  background-color: #fff; /* White form background */
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -21,14 +21,14 @@ h2 {
   text-align: center;
   margin-bottom: 24px;
   font-size: 24px;
-  color: #333;
+  color: #000; /* Black text */
 }
 
 label {
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
-  color: #444;
+  color: #000; /* Black text */
 }
 
 input[type="text"],
@@ -36,17 +36,19 @@ input[type="email"] {
   width: 100%; /* Full width */
   padding: 12px 14px;
   margin-bottom: 18px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Light gray border */
   border-radius: 8px;
   font-size: 16px;
   box-sizing: border-box;
+  background-color: #f0f0f0; /* Light gray background for inputs */
+  color: #000; /* Black text */
 }
 
 button {
   width: 100%; /* Full width button */
   padding: 12px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #000; /* Black button background */
+  color: #fff; /* White text */
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -55,5 +57,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #444; /* Dark gray on hover */
 }
