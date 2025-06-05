@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 40px;
-    background-color: #1a1a1a;
+    background-color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     text-align: center;
@@ -10,7 +10,7 @@ body {
 h1 {
     margin-bottom: 40px;
     font-size: 36px;
-    color: #f4f4f4;
+    color: rgb(0, 0, 0);
 }
 
 .card-container {
@@ -18,11 +18,13 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+	
 }
 
 .card {
-    width: 350px; /* Increased width */
-    height: 240px; /* Increased height */
+background-color: rgb(0, 128, 255);
+    width: 300px; /* Increased width */
+    height: 200px; /* Increased height */
     border-radius: 15px;
     overflow: hidden;
     position: relative;
