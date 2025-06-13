@@ -3,10 +3,15 @@ package com.demo.model;
 
 
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,7 +24,7 @@ public class Author {
 
 
 @Id
-@GeneratedValue
+@GeneratedValue(strategy=GenerationType.IDENTITY)
 private Integer id;
 @Column(
 		name="f_name")
@@ -30,7 +35,8 @@ private String lastName;
 		)
 private String  email;
 
-
+@ManyToMany(mappedBy="authors")
+List<Course>courses;
 
 public Integer getId() {
 	return id;
