@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Lecture {
@@ -18,6 +19,28 @@ private String name;
 @JoinColumn(name="section_id")
 private Section section;
 
+
+@OneToOne 
+private Resources resource;
+
+
+
+
+
+
+
+public Section getSection() {
+	return section;
+}
+public void setSection(Section section) {
+	this.section = section;
+}
+public Resources getResource() {
+	return resource;
+}
+public void setResource(Resources resource) {
+	this.resource = resource;
+}
 public Integer getId() {
 	return id;
 }
