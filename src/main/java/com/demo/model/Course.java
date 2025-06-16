@@ -5,19 +5,14 @@ package com.demo.model;
 import java.util.List;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Course {
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-private Integer c_id;
+public class Course  extends BaseClass   {
+
 private String title;
 private String description;
 @ManyToMany
@@ -59,12 +54,7 @@ public List<Author> getAuthor() {
 public void setAuthor(List<Author> author) {
 	this.authors = author;
 }
-public Integer getC_id() {
-	return c_id;
-}
-public void setC_id(Integer c_id) {
-	this.c_id = c_id;
-}
+
 public String getTitle() {
 	return title;
 }

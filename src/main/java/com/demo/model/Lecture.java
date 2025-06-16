@@ -1,18 +1,13 @@
 package com.demo.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class Lecture {
-@Id 
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-private Integer id;
+public class Lecture  extends BaseClass  {
+
 private String name;
 
 @ManyToOne	
@@ -41,12 +36,7 @@ public Resources getResource() {
 public void setResource(Resources resource) {
 	this.resource = resource;
 }
-public Integer getId() {
-	return id;
-}
-public void setId(Integer id) {
-	this.id = id;
-}
+
 public String getName() {
 	return name;
 }

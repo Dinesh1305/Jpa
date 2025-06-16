@@ -3,18 +3,13 @@ package com.demo.model;
 import java.util.List;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Section {
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-private Integer p_id;
+public class Section  extends BaseClass  {
+
 private String name;
 private String sectionOrder;
 
@@ -34,12 +29,7 @@ public Course getCourse() {
 public void setCourse(Course course) {
 	this.course = course;
 }
-public Integer getP_id() {
-	return p_id;
-}
-public void setP_id(Integer p_id) {
-	this.p_id = p_id;
-}
+
 public String getName() {
 	return name;
 }

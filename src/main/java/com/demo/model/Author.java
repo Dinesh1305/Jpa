@@ -7,10 +7,6 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,12 +16,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 
-public class Author {
+public class Author extends BaseClass {
 
 
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-private Integer id;
+
 @Column(
 		name="f_name")
 private @Setter String firstName;
@@ -38,12 +32,7 @@ private String  email;
 @ManyToMany(mappedBy="authors")
 List<Course>courses;
 
-public Integer getId() {
-	return id;
-}
-public void setId(Integer id) {
-	this.id = id;
-}
+
 public String getFirstName() {
 	return firstName;
 }
