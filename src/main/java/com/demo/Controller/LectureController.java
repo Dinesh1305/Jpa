@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.model.Lecture;
-import com.demo.repo.LectureRepo;
+import com.demo.repository.LectureRepo;
 @Controller
 public class LectureController {
 @Autowired

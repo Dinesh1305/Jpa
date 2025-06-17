@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.demo.model.Author;
 import com.demo.model.Course;
 import com.demo.model.Resources;
-import com.demo.repo.AuthorRepo;
-import com.demo.repo.CourseRepo;
-import com.demo.repo.ResourcesRepo;
+import com.demo.repository.AuthorRepo;
+import com.demo.repository.CourseRepo;
+import com.demo.repository.ResourcesRepo;
 
 @Controller
 public class controllers {

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.model.Resources;
-import com.demo.repo.ResourcesRepo;
+import com.demo.repository.ResourcesRepo;
 
 @Controller
 public class ResourcesController {

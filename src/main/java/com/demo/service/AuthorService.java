@@ -3,7 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.model.Author;
-import com.demo.repo.AuthorRepo;
+import com.demo.repository.AuthorRepo;
 
 @Service
 public class AuthorService {
