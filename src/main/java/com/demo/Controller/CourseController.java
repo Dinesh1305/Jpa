@@ -3,8 +3,9 @@ package com.demo.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.demo.model.Course;
 import com.demo.repository.CourseRepo;
@@ -13,7 +14,7 @@ public class CourseController {
 	 @Autowired
 	  private CourseRepo courseRepo;
 	 
-	@RequestMapping("/saveCourse")
+	@PostMapping("/saveCourse")
 	public String savecourse(@ModelAttribute("course") Course c)
 	{
 		//System.out.println("hello"+" "+c);
@@ -21,7 +22,7 @@ public class CourseController {
 		
 		return "index";
 	}
-	@RequestMapping("courseForm")
+	@GetMapping("courseForm")
 	public String courses(Model model) {
 	    model.addAttribute("course", new Course());  // Add this line
 	    return "course";
