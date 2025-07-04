@@ -9,22 +9,19 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.EqualsAndHashCode;
+
 
 @Data
-@NoArgsConstructor
 @Entity
-@Setter
-@Getter
+@EqualsAndHashCode(callSuper = true)
 public class Author extends BaseClass {
 
 
 
 @Column(
 		name="f_name")
-private @Setter String firstName;
+private  String firstName;
 private String lastName;
 @Column(
 		unique=true
