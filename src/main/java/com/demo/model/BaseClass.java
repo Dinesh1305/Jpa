@@ -6,8 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
 
 @MappedSuperclass
+@Data
 public class BaseClass {
 
 	
@@ -17,21 +19,7 @@ public class BaseClass {
 	
 	private LocalDate created_time;
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public LocalDate getCreated_time() {
-		return created_time;
-	}
-
-	public void setCreated_time(LocalDate created_time) {
-		this.created_time = created_time;
-	}
 	
 	
 	

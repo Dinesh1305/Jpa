@@ -16,16 +16,19 @@ public class AuthorController {
 	 @Autowired
 	 private AuthorService service;
 	 
+	 
+
 	 @GetMapping("authorForm")
 	 public String author1(Model model) {
 	     model.addAttribute("author", new Author());  
+	   
 	     return "author";  
 	 }
 	 @PostMapping("saveAuthor")
 	 public String add(@ModelAttribute Author author) {
 	  
 		 service.save(author);
-		 
+		
 	     return "index";  
 	 }
 }
