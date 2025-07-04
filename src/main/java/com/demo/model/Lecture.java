@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
+import lombok.Data;
 
 @Entity
+@Data
 public class Lecture  extends BaseClass  {
 
 private String name;
@@ -23,25 +25,5 @@ private Resources resource;
 
 
 
-
-public Section getSection() {
-	return section;
-}
-public void setSection(Section section) {
-	this.section = section;
-}
-public Resources getResource() {
-	return resource;
-}
-public void setResource(Resources resource) {
-	this.resource = resource;
-}
-
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
 
 }
